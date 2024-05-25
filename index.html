@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bootstrap Project</title>
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="CSS/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <nav id="nav" class="navbar navbar-expand-sm  fixed-top" style="z-index: 11; display: block;">
+            <div class="container-fluid">
+              
+                <a class="navbar-brand" href="#"><!--logo-->
+                    <img style="background-size: cover;  box-shadow: 0 5px 20px 7px rgb(246, 195, 203);
+                 width: 10vh;height: 5vh; opacity: 0.1;"
+                         class="rounded" 
+                         src="img/initial-ac-logo-design-combination-icon_826849-694.jpg" alt="">
+                </a>
+                <div class="navbar-text">Syria</div>
+
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#myCollapseBtn">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="myCollapseBtn" class="collapse  navbar-collapse ms-2">
+                    <ul class="navbar-nav me-auto  " >
+                        <li class="nav-item" >
+                            <a class="nav-link text-info  basic-links "  href="#"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info basic-links "  href="#"> Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-info trip  basic-links "  data-bs-toggle="dropdown" role="button" href="#"><span class="t">T</span>rip</a>
+                            <ul class="dropdown-menu">
+                                <li> <a class="dropdown-item text-info" href="#"> Damas</a></li>
+                                <li> <a class="dropdown-item text-info" href="#">Aleppo</a></li>
+                                <li> <a class="dropdown-item text-info" href="#">Latakia</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li> <a class="dropdown-item text-info" href="#">Arwad Iceland</a></li>
+                                <li> <a class="dropdown-item text-info" href="#">More... </a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-info basic-links  "  href="#">About</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input id="search-box" type="text " class="form-control me-2 " placeholder="Search">
+                        <button class="btn btn-info text-light me-2" type="button">Search</button>
+                        <!--modal section in navbar-->
+                        <button class="btn btn-info  text-light" type="button" data-bs-toggle="modal" 
+                        data-bs-target="#loginModal" >Login</button>
+                    </form>
+
+                </div><!--collapseable btn-->
+            </div><!--container-->
+        </nav>
+        <form ><!--Modal-->
+            <div class="modal"  id="loginModal" >
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <div class="modal-header bg-info ">
+                            <h6 class="modal-title text-light">Login</h6>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div><!--modal header-->
+
+                        <div class="modal-body"><!--modal body-->
+                            <form class="w-75">
+                                <div class="form-group">
+                                    <label class="pb-1 text-info">Email Address</label>
+                                    <input class="form-control " type="email"  >
+                                    <small class="form-text text-secondary "> We will never share your email with anyone else </small>
+                                </div><!--form group email-->
+                                <div class="form-group pt-3 pb-3">
+                                    <label class="pb-1 text-info">Password</label>
+                                    <input class="form-control " type="password" >
+                                </div><!--form group password-->
+                                <div class="form-check form-switch  pt-3 pb-3 ">
+                                    <input type="checkbox" class="form-check-input bg-info" id="remeber" >
+                                    <label  class=" text-info">Remember Me</label>
+                                </div><!--form toogle switch-->
+                            </form>
+                        </div><!--modal body-->
+                        <div class="modal-footer"> 
+                            <button type="button" class=" btn btn-info text-light me-auto" >Login</button>  
+                            <button type="button" class=" btn btn-info text-light" data-bs-dismiss="modal">Close</button>                                    
+                        </div><!--modal footer-->
+                        
+                    </div><!--modal content-->
+                </div><!--modal dialog-->
+            </div><!--modal-->
+        </form><!--modal form-->
+
+
+        
+        
+
+        <section class="row" style="position: relative; margin-top: 10vh;"><!--home section-->
+    
+            <!--home slide-->
+            <div id="mySlide" class="carousel slide  " data-bs-ride="carousel"  >
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-slide-to="0" data-bs-target="#mySlide "class="active" ></button>
+                    <button type="button" data-bs-slide-to="1" data-bs-target="#mySlide" ></button>
+                    <button type="button" data-bs-slide-to="2" data-bs-target="#mySlide" ></button>
+                    <button type="button" data-bs-slide-to="3" data-bs-target="#mySlide" ></button>
+    
+                </div><!--carousel indicators-->
+                <div class="carousel-inner">
+                    
+                    <div class="carousel-item active "  >
+                        <img src="img/damas.jpeg" alt="" class="d-block w-100 ">
+                        <div class="overlay w-50 d-flex flex-column align-items-center p-1 text-light">
+                            <h2 class=>Damascus</h2>
+                            <p>Great Damas</p>
+                            <button  class="btn btn-info mb-3 text-light">Visit Us</button>
+                        </div><!--overlay-->
+                    </div><!--carousel item-->
+                    <div class="carousel-item " >
+                        <img src="img/Aleppo.jpeg" alt="" class="d-block w-100 ">
+                        <div class="overlay w-50 d-flex flex-column align-items-center p-1 text-light">
+                            <h2 class=>Aleppo</h2>
+                            <p>Thanks Aleppo</p>
+                            <button class="btn btn-info mb-3 text-light">Visit Us</button>
+                        </div><!--overlay-->
+                    </div><!--carousel item-->
+                    <div class="carousel-item " >
+                        <img src="img/latakia.jpg_large" alt="" class="d-block w-100 ">
+                        <div class="overlay w-50 d-flex flex-column align-items-center p-1 text-light">
+                            <h2 class=>Latakia</h2>
+                            <p>Latakia is Memories</p>
+                            <button class="btn btn-info mb-3 text-light">Visit Us</button>
+                        </div><!--overlay-->
+                    </div><!--carousel item-->
+                    <div class="carousel-item " >
+                        <img src="img/Arwad.jpeg" alt="" class="d-block w-100 ">
+                        <div class="overlay w-50 d-flex flex-column align-items-center p-1 text-light">
+                            <h2 class=>Arwad Iceland</h2>
+                            <p>Amazing Arwad</p>
+                            <button class="btn btn-info mb-3 text-light">Visit Us</button>
+                        </div><!--overlay-->
+                    </div><!--carousel item-->
+    
+                </div><!--carousel inner-->
+    
+    
+                <!--control buttons prev next-->
+                <button type="button" class="carousel-control-prev" data-bs-target="#mySlide" data-bs-slide="prev"   >
+                    <span class="carousel-control-prev-icon  btn btn-info" style="margin-left: -60%; font-size: 24px;" ></span>
+                </button>
+                <button type="button" class="carousel-control-next " data-bs-target="#mySlide" data-bs-slide="next"  >
+                    <span class="carousel-control-next-icon btn btn-info " style="margin-right: -60%; font-size: 24px;"  > </span>
+                </button>
+     
+            </div><!--carousel slide-->
+
+
+            <!--social midea icons -->
+            <aside class=" col-2  col-lg-1 position-fixed mt-5  " >
+                <ul class="side-icon-section  " >
+                    <li><a href="#"><i class="fa-brands fa-square-facebook    " ></i></a></li>                 
+                    <li><a href="#"><i class="fa-brands fa-square-whatsapp "></i></a></li>                 
+                    <li><a href="#"><i class="fa-brands fa-square-twitter  "></i></a></li>               
+                    <li><a href="#"><i class="fa-brands fa-linkedin "></i></a></li>                
+                    <li><a href="#"><i class="fa-brands fa-square-instagram "></i></a></li>                
+                  </ul>  
+            </aside>
+
+        </section><!--home section-->
+
+
+        <!--welcome section-->
+        <section ><!--welcome section-->
+            <div class="welcome  p-2 border-1 border-seconday rounded-bottom  rounded">
+                <div class=" m-auto " style="width: 95%;">
+                    <h2 class=" card-title p-2 ">Welcome</h2>
+                    <p class="card-text  text-light"> Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quibusdam libero tempore soluta ut deleniti rem voluptates odit placeat 
+                        recusandae? Neque reiciendis. Quibusdam libero tempore soluta ut deleniti rem voluptates odit placeat 
+                    </p>                      
+                    <button class="btn btn-light text-info m-2" type="button" href="">Learn More</button>
+                </div>
+            </div>
+            
+            <div class="line  py-2  container-fluid" style="background-color:  rgb(234, 234, 234);" >
+                <div class="bg-secondary me-auto mb-2 mt-2" style="height: 2px;"></div>
+            </div><!--lineee-->
+
+            <div class="rounded border-1 border-seconday py-5  mb-3 w-90" 
+                 style="background-color: #76adb6;">
+                <h2 class="text-center text-light fs-1 ">Popular destinations in Syria </h2>
+            </div>
+
+            <section ><!--city- colappse-->
+
+                <button  data-bs-target="#damas" 
+                         class="d-grid col-12  border border-bottom-1 border-muted fs-3  pl-4 py-1  cities shadow-lg " 
+                         data-bs-toggle="collapse" > 
+                    <span class="badge text-start fs-3 "> Damascus</span> 
+                    <div id="damas" class=" p-3 fs-6 collapse text-muted text-start "  
+                         style="background-color: rgb(228, 227, 227);" >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Iure velit aliquid sint id ab, earum sed quam asperiores excepturi delectus,
+                         reiciendis iste provident veniam? Non ullam saepe maxime culpa aliquam.
+                   </div>
+                </button>
+                
+              
+                <button data-bs-target="#latakia" 
+                        class="d-grid col-12 border border-bottom-1 border-muted fs-3 pl-4 py-1  cities shadow-lg " 
+                        data-bs-toggle="collapse" > 
+                    <span class="badge text-start fs-3">Latakia</span> 
+                    <div id="latakia" class=" p-3 fs-6  collapse text-muted text-start" 
+                         style="background-color: rgb(228, 227, 227);" >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Iure velit aliquid sint id ab, earum sed quam asperiores excepturi delectus, 
+                        reiciendis iste provident veniam? Non ullam saepe maxime culpa aliquam.
+                   </div> 
+                </button>
+                
+                <button data-bs-target="#aleppo" 
+                        class="d-grid  col-12 border border-bottom-1 border-muted  fs-3 pl-4 py-1 cities shadow-lg" 
+                        data-bs-toggle="collapse">
+                    <span class="badge text-start fs-3">Aleppo</span>
+                    <div id="aleppo" class=" p-3  fs-6 collapse text-muted  text-start" 
+                         style="background-color: rgb(228, 227, 227);" >
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Iure velit aliquid sint id ab, earum sed quam asperiores excepturi delectus,
+                        reiciendis iste provident veniam? Non ullam saepe maxime culpa aliquam.
+                   </div>
+                </button>
+                   
+            </section><!--city- colappse-->
+
+            <div class="line  py-2  container-fluid" style="background-color: rgb(234, 234, 234);" >
+                <div class="bg-secondary me-auto mb-2 mt-2" style="height: 2px;"></div>
+            </div><!--lineee-->
+
+        </section><!--welcome section-->
+
+
+        <section><!--translation section-->
+            <!--from arabic to english-->
+            <div class="translate-from-arabic-english" >
+                <div class="first-section">
+                    <div class="rounded border-1 border-seconday py-1 " 
+                    style="background-color: #76adb6;">
+                    <h2 class="text-center text-light fs-1 ">Translate from Arabic to English </h2>
+               </div>
+               
+               <div class=" border-1 border-seconday py-4 rounded " 
+                    style="background-color: #96c9d1;">
+
+                   <div class="container">
+                       <h4 class="text-light">Write and Translate  <a class="text-primary text-decoration-none" href="#">Press Here</a> </h4>
+                       <button class="btn btn-light text-info mb-2 p-0" 
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="right"
+                               title="copy to clipboard">
+                               <span class="btn border border-0 px-2 text-info " data-bs-toggle="modal" data-bs-target="#copyModal" >Copy</span>
+                       </button>
+                       <textarea name="translate" placeholder="translate" rows="4" 
+                       class="container d-block border-0 rounded"></textarea>     
+                   </div>  
+               </div>
+
+            </div><!--from arabic to english-->
+
+           
+            <div class="line  py-2  container-fluid" style="background-color: rgb(234, 234, 234);" >
+                <div class="bg-secondary me-auto mb-2 mt-2" style="height: 2px;"></div>
+            </div><!--lineee-->
+
+
+            <!--from english to arabic-->
+            <div class="translate-from-arabic-english" >
+                <div class="first-section">
+                    <div class="rounded border-1 border-seconday py-1 " 
+                    style="background-color: #76adb6;">
+                    <h2 class="text-center text-light fs-1 ">Translate from English to Arabic </h2>
+                    </div>
+               </div>
+               
+               <div class=" border-1 border-seconday py-4 rounded " 
+                    style="background-color: #96c9d1;">
+
+                   <div class="container">
+                       <h4 class="text-light">Write and Translate  <a class="text-primary text-decoration-none" href="#">Press Here</a> </h4>
+                       <button class="btn btn-light text-info mb-2 p-0" 
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="right"
+                               title="copy to clipboard">
+                               <span class="btn border border-0 px-2 text-info " data-bs-toggle="modal" data-bs-target="#copyModal" >Copy</span>
+                       </button>
+                       <textarea name="translate" placeholder="translate" rows="4" 
+                       class="container d-block border-0 rounded"></textarea>     
+                   </div>  
+               </div>
+
+            </div><!--from English to Arabic-->
+
+            <div class="line  py-2  container-fluid" style="background-color: rgb(234, 234, 234);" >
+                <div class="bg-secondary me-auto mb-2 mt-2" style="height: 2px;"></div>
+            </div><!--lineee-->
+
+            <!--from arabic to germany-->
+            <div class="translate-from-arabic-english" >
+                <div class="first-section">
+                    <div class="rounded border-1 border-seconday py-1 " 
+                         style="background-color: #76adb6;">
+                        <h2 class="text-center text-light fs-1 ">Translate from Arabic to Germany </h2>
+                    </div>
+               </div>
+               
+               <div class=" border-1 border-seconday py-4  rounded " 
+                    style="background-color: #96c9d1;">
+
+                   <div class="container">
+                       <h4 class="text-light">Write and Translate  <a class="text-primary text-decoration-none" href="#">Press Here</a> </h4>
+                       <button class="btn btn-light text-info mb-2 p-0 " 
+                               data-bs-toggle="tooltip"
+                               data-bs-placement="right"
+                               title="copy to clipboard">
+                               <span class="btn border border-0 px-2 text-info" data-bs-toggle="modal" data-bs-target="#copyModal" >Copy</span>
+                       </button>
+                       <textarea name="translate" placeholder="translate" rows="4" 
+                       class="container d-block border-0 rounded"></textarea>     
+                   </div>  
+               </div>
+
+            </div><!--from Arabic to Germany-->
+            <div class="modal" id="copyModal">
+                <div class="modal-dialog">
+                    <div class="modal-content container py-3 ">
+                        <h6 class="modal-title">alanooramadan@gmail.com</h6>
+                        <span class="modal-text ms-auto">:تم نسخ النص</span>
+                        <button class="btn btn-primary ms-auto" data-bs-dismiss="modal">OK</button>
+                    </div>
+                </div>
+            </div><!--copy modal-->
+
+            <div class="line  py-2  container-fluid" style="background-color: rgb(234, 234, 234);" >
+                <div class="bg-secondary me-auto mb-2 mt-2" style="height: 2px;"></div>
+            </div><!--lineee-->
+
+        </section><!--translation section--> 
+
+        <section>
+            <div class="fixed-palmyra rounded" ></div> 
+        </section>
+
+        <section id="city-card-section"><!--popular destination-->
+            <div class="popular-destination-section">
+                <div class="rounded border-1 border-seconday py-1 mb-3" 
+                        style="background-color: #76adb6;">
+                        <h2 class="text-center text-light fs-1 ">Popular Destinations in Syria</h2>
+                </div>
+            </div>
+            <!--cards div container-->
+            <div  class="container ">
+                <div class="row gap-5  d-flex justify-content-around">
+
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3 shadow-lg  " >
+                        <img class="card-img-top h-80" src="img/Krak-des-Chevaliers-Syria damas.jpeg" alt="">
+                        <div class="card-body text-info py-3" >                            
+                            <span class="card-title fs-4 col-7  ">Homs</span>
+                            <button  type="button" class="btn btn-info text-light mt-2 p-1 stretched-link" 
+                                         style="position: absolute; right: 1vh; z-index: 2; ">Know More
+                            </button>
+                            <p class="card-text text-start mt-2">Al-Husn citadel</p>
+                        </div>
+                    </div>
+    
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3  shadow-lg " >
+                        <img class="card-img-top h-80" src="img/palmyra.jpeg" alt="">
+                        <div class="card-body text-info py-3" >                            
+                            <span class="card-title fs-4 col-7  ">Palmyra</span>
+                            <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                     style="position: absolute; right: 1vh; z-index: 2; ">Know More
+                            </button>
+                            <p class="card-text text-start mt-2">Ancient city in tne world</p>
+                        </div>
+                    </div>
+                    
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3  shadow-lg " >
+                        <img class="card-img-top " src="img/norias-water-wheels.jpg" alt="">
+                        <div class="card-body text-info py-3 " >                            
+                                <span class="card-title fs-4 col-7  "> Hamah</span>
+                                <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                         style="position: absolute; right: 1vh; z-index: 2;">Know More
+                                </button>
+                            <p class="card-text text-start mt-2">Norias Water Wheels</p>
+                        </div>
+                    </div>
+
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3  shadow-lg " >
+                        <img class="card-img-top " src="img/Arwad.jpeg" alt="">
+                        <div class="card-body text-info py-3 ">                            
+                                <span class="card-title fs-4 col-7 ">Arwad</span>
+                                <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                         style="position: absolute; right: 1vh; z-index: 2; ">Know More
+                                </button>
+                            <p class="card-text text-start  mt-2">Ancient city in tne world</p>
+                        </div>
+                    </div>
+    
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3  shadow-lg " >
+                        <img class="card-img-top " src="img/Aleppo.jpeg" alt="">
+                        <div class="card-body text-info py-3 ">                            
+                            <span class="card-title fs-4 col-7  ">Aleppo</span>
+                            <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                     style="position: absolute; right: 1vh; z-index: 2;">Know More
+                            </button>
+                            <p class="card-text text-start mt-2">Ancient city in tne world</p>
+                        </div>
+                    </div>
+                    
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3  shadow-lg " >
+                        <img class="card-img-top " src="img/Behive-Houses-Syria Aleppo.jpeg" alt="">
+                        <div class="card-body text-info py-3 ">                            
+                                <span class="card-title fs-4 col-7  ">Aleppo</span>
+                                <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                         style="position: absolute; right: 1vh;  z-index: 2;">Know More
+                                </button>
+                            <p class="card-text text-start mt-2">Behive houses in Aleppo</p>
+                        </div>
+                    </div>
+
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3 shadow-lg  " >
+                        <img class="card-img-top " src="img/arwad-island.jpg" alt="">
+                        <div class="card-body text-info py-3 " >                            
+                                <span class="card-title fs-4 col-7  ">Arwad</span>
+                                <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                         style="position: absolute; right: 1vh; z-index: 2; ">Know More
+                                </button>
+                            <p class="card-text text-start mt-2">Arwad Island</p>
+                        </div>
+                    </div>
+    
+                    <div id="city-card" class="card px-2 col-10 col-sm-8 col-md-4 col-lg-3  shadow-lg " >
+                        <img class="card-img-top" src="img/Ancient-Bosra-4.jpg" alt="">
+                        <div class="card-body text-info py-3" >                            
+                            <span class="card-title fs-4 col-7 ">Busra</span>
+                            <button  type="button" class="btn btn-info text-light mt-2 p-1  " 
+                                     style="position: absolute; right: 1vh; z-index: 2;">Know More
+                            </button>
+                            <p class="card-text text-start mt-2">Roman capital in Palmyra</p>
+                        </div>
+                    </div>
+                    
+                   
+    
+                </div><!--row cards-->
+        </section>
+
+        <section>
+            <div class="fixed-latakia rounded" ></div> 
+        </section>
+
+        <!--thanks for-->
+        <section class="mb-5">
+            <div class="thanks-for bg-muted ">
+                <div  class="rounded border-1 border-seconday py-1 mb-3" 
+                        style="background-color: #76adb6;">
+                        <h2 class="text-center text-light fs-1 ">Thanks For</h2>
+                </div>
+
+                <div class="container">
+                    <div class="row d-flex justify-content-around gap-3 ">             
+                        <div class="thanks-card col-9 col-lg-3 text-light  p-0 " 
+                             style="position: relative;  " >
+
+                            <img  id="thanks-back-img"   src="img/Alann.jpeg" alt="" class="w-100">
+                            <div  id="thanks-overlay">
+                                <div >
+                                    <div id="thanks-up-p" class=" mt-2 ml-2"  >
+                                        <h5 class="card-titl"> All thanks and appreciation</h5>
+                                        <div class="fs-6" >
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>may. 21. 2024</span>
+                                        </div>
+                                    </div>
+
+                                    <div  class=" thanks-card-footer"  >
+                                        <img class="rounded-circle " height="110px" width="90px" src="img/Alann.jpeg" alt="">
+                                        <h5 class="card-title bp-0 mb-0">Eng. Alan Ramadan</h5>
+                                        <p class=" pt-0 mt-0">Front End Developer</p>
+                                    </div>
+                                </div>                                  
+                            </div>                  
+                        </div><!--first thanks card-->
+
+
+                        <div class="thanks-card  col-9 col-lg-3 text-light  p-0 " 
+                             style="position: relative;  " >
+
+                            <img id="thanks-back-img"   src="img/Alann.jpeg" alt="" >
+                            <div id="thanks-overlay" >
+                                <div >
+                                    <div id="thanks-up-p" class=" mt-2 ml-2">
+                                        <h5 class="card-titl"> All thanks and appreciation</h5>
+                                        <div >
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>may. 21. 2024</span>
+                                        </div>
+                                    </div>
+
+                                    <div  class=" thanks-card-footer"  >
+                                        <img class="rounded-circle " height="110px" width="90px" src="img/Alann.jpeg" alt="">
+                                        <h5 class="card-title bp-0 mb-0">Eng. Alan Ramadan</h5>
+                                        <p class=" pt-0 mt-0">Front End Developer</p>
+                                    </div>
+                                </div>                                  
+                            </div>      
+                        </div><!--second thanks card-->
+
+
+                        <div class="thanks-card   col-9 col-lg-3 text-light  p-0 "                        
+                             style="position: relative;  " >
+                                                      
+                            <img class=".hover-zoom " id="thanks-back-img"  src="img/Alann.jpeg" alt="" >
+                            <div id="thanks-overlay" >
+                                <div >
+                                    <div id="thanks-up-p" class=" mt-2 ml-2" >
+                                        <h5 class="card-titl"> All thanks and appreciation</h5>
+                                        <div >
+                                            <i class="fa-regular fa-clock"></i>
+                                            <span>may. 21. 2024</span>
+                                        </div>
+                                    </div>
+
+                                    <div  class=" thanks-card-footer" >
+                                        <img class="rounded-circle " height="110px" width="90px" src="img/Alann.jpeg" alt="">
+                                        <h5 class="card-title bp-0 mb-0">Eng. Alan Ramadan</h5>
+                                        <p class=" pt-0 mt-0">Front End Developer</p>
+                                    </div>
+                                </div>                                  
+                            </div>
+                           
+                        </div><!--third thanks card-->
+                    </div><!--row-->
+                </div><!--container-->
+            </div><!--thanks for class-->
+        </section><!--thanks for section-->
+        
+
+        <div class="line  py-2  container-fluid mt-5" >
+            <div class="bg-secondary mt-5" style="height: 2px;"></div>
+        </div><!--lineee-->
+
+
+        <!--News section-->
+        <section class="mb-5">
+            <h2 class="news-title text-center">Syria News</h2>
+            <div class="container w-80">
+                <div class="row d-flex flex-column gap-5 p-0 align-items-center">
+
+
+                    <!--item1-->
+                   
+                    <div class="news-item-content news-item-primary col-11   col-lg-12   rounded border-0 d-flex   px-0"  >
+
+                    <div class="cont-part col-md-7  col-lg-8 ">
+                        <div class="writing-part py-5    align-items-center  ps-5 " 
+                            style="position: relative; ">
+                            <article class="p-2">
+                             <h3>Podcast</h3>
+                             <p><i class="fa-regular fa-calendar-days"></i> Wed.May.2024</May></p>
+                             <div class="progress  mb-4 " style="width: 20vh; height: 1vh;" >
+                               <div class="progress-bar bg-primary"  ></div>
+                             </div><!--progress bar-->
+                              <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                               Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                               dolorum voluptates animi! Rerum iste nulla sint alias doloribus earum autem tempore ad?
+                               orem ipsum, dolor sit amet consectetur adipisicing elit. 
+                               Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                               dolorum voluptates animi! Rerum iste nulla
+                              </p>
+                            </article>
+
+                            <div class="  d-flex gap-1" style="position: absolute; bottom: 4vh;">
+                              <button class="rounded py-1 px-2 btn btn-secondary ">
+                               <i class="fa-solid fa-tag"></i>
+                               <span>Podcast</span>
+                             </button>
+                             <button class="rounded py-1 px-2 btn btn-secondary ">
+                               <i class="fa-solid fa-clock"></i>
+                               <span>55 mins</span>
+                             </button>
+                             <button class="rounded py-1 px-2   play-btn1">
+                               <i class="fa-solid fa-play"></i>
+                               <span>Play Episode</span>
+                             </button>
+                            </div><!--buttons-->
+
+                        </div><!--left-part-->
+                    </div>           
+
+                   <div class="image-part  col-md-5 col-lg-4 rounded " >
+                         <img class="clip rounded mx-0 text-end image-fluid" src="img/arwad-island.jpg" alt="" 
+                          style="background-size: auto; height: 100%; width: 100%; " >
+                   </div><!--right part-->
+
+               </div><!--news-item1-content-->
+
+
+
+
+                    <!--item2-->
+                    <div class="news-item-content col-11  news-item-danger  col-lg-12  rounded border-0 d-flex   px-0"  >
+
+                    <div class="image-part  col-md-5 col-lg-4 rounded " >
+                       <img class="clipped2 rounded mx-0 text-end image-fluid" src="img/346_1_orig.jpg" alt="" 
+                             style="background-size: auto; height: 100%; width: 100%; " >
+                   </div><!--right part-->
+
+
+                   <div class="writing-part py-5   col-md-7  col-lg-8 align-items-center  ps-5   " 
+                        style="position: relative; ">
+                       <article class="p-2">
+                           <h3>Podcast</h3>
+                           <p><i class="fa-regular fa-calendar-days"></i> Wed.May.2024</May></p>
+                           <div class="progress  mb-4 " style="width: 20vh; height: 1vh;" >
+                               <div class="progress-bar bg-danger"  ></div>
+                           </div><!--progress bar-->
+                           <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                               Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                               dolorum voluptates animi! Rerum iste nulla sint alias doloribus earum autem tempore ad?
+                               orem ipsum, dolor sit amet consectetur adipisicing elit. 
+                               Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                               dolorum voluptates animi! Rerum iste nulla
+                           </p>
+                       </article>
+
+                       <div class="  d-flex gap-1" style="position: absolute; bottom: 4vh;">
+                           <button class="rounded py-1 px-2 btn btn-secondary ">
+                               <i class="fa-solid fa-tag"></i>
+                               <span>Podcast</span>
+                           </button>
+                           <button class="rounded py-1 px-2 btn btn-secondary ">
+                               <i class="fa-solid fa-clock"></i>
+                               <span>55 mins</span>
+                           </button>
+                           <button class="rounded py-1 px-2   play-btn2">
+                               <i class="fa-solid fa-play"></i>
+                               <span>Play Episode</span>
+                           </button>
+                       </div><!--buttons-->
+
+                   </div><!--left-part-->
+
+               </div><!--news-item2-content-->
+                     
+
+                    <!--item3-->
+                    <div class="news-item-content col-11  col-lg-12  news-item-success   rounded border-0 d-flex   px-0"  >
+
+                    <div class="cont-part col-md-7  col-lg-8 ">
+                        <div class="writing-part py-5   align-items-center  ps-5   " 
+                            style="position: relative; ">
+                            <article class="p-2">
+                             <h3>Podcast</h3>
+                             <p><i class="fa-regular fa-calendar-days"></i> Wed.May.2024</May></p>
+                             <div class="progress  mb-4 " style="width: 20vh; height: 1vh;" >
+                               <div class="progress-bar bg-success"  ></div>
+                             </div><!--progress bar-->
+                              <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                               Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                               dolorum voluptates animi! Rerum iste nulla sint alias doloribus earum autem tempore ad?
+                               orem ipsum, dolor sit amet consectetur adipisicing elit. 
+                               Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                               dolorum voluptates animi! Rerum iste nulla
+                              </p>
+                            </article>
+
+                            <div class="  d-flex gap-1" style="position: absolute; bottom: 4vh;">
+                              <button class="rounded py-1 px-2 btn btn-secondary ">
+                               <i class="fa-solid fa-tag"></i>
+                               <span>Podcast</span>
+                             </button>
+                             <button class="rounded py-1 px-2 btn btn-secondary ">
+                               <i class="fa-solid fa-clock"></i>
+                               <span>55 mins</span>
+                             </button>
+                             <button class="rounded py-1 px-2   play-btn3">
+                               <i class="fa-solid fa-play"></i>
+                               <span>Play Episode</span>
+                             </button>
+                            </div><!--buttons-->
+
+                        </div><!--left-part-->
+                    </div>
+
+                    <div class="image-part  col-md-5 col-lg-4 rounded " >
+                        <img class="clip rounded mx-0 text-end image-fluid" src="img/arwad-island.jpg" alt="" 
+                         style="background-size: auto; height: 100%; width: 100%; " >
+                  </div><!--right part-->
+
+               </div><!--news-item3-content-->
+
+                    
+
+
+                    <!--item4-->
+                    <div class="news-item-content col-11   col-lg-12  news-item-warning   rounded border-0 d-flex   px-0" >
+
+                         <div class="image-part  col-md-5 col-lg-4 rounded " >
+                            <img class="clipped2 rounded mx-0 text-end image-fluid" src="img/norias-water-wheels.jpg" alt="" 
+                                  style="background-size: cover; height: 100%; width: 100%; " >
+                        </div><!--right part-->
+
+
+                        <div class="writing-part py-5   col-md-7  col-lg-8     ps-5   " 
+                             style="position: relative; ">
+                            <article class="p-2">
+                                <h3>Podcast</h3>
+                                <p><i class="fa-regular fa-calendar-days"></i> Wed.May.2024</May></p>
+                                <div class="progress  mb-4 " style="width: 20vh; height: 1vh;" >
+                                    <div class="progress-bar bg-warning"  ></div>
+                                </div><!--progress bar-->
+                                <p >Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                                    dolorum voluptates animi! Rerum iste nulla sint alias doloribus earum autem tempore ad?
+                                    orem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                    Quaerat rerum fuga ipsam reprehenderit exercitationem voluptatibus quod debitis 
+                                    dolorum voluptates animi! Rerum iste nulla
+                                </p>
+                            </article>
+
+                            <div class="  d-flex gap-1" style="position: absolute; bottom: 4vh;">
+                                <button class="rounded py-1 px-2 btn btn-secondary ">
+                                    <i class="fa-solid fa-tag"></i>
+                                    <span>Podcast</span>
+                                </button>
+                                <button class="rounded py-1 px-2 btn btn-secondary ">
+                                    <i class="fa-solid fa-clock"></i>
+                                    <span>55 mins</span>
+                                </button>
+                                <button class="rounded py-1 px-2   play-btn4">
+                                    <i class="fa-solid fa-play"></i>
+                                    <span>Play Episode</span>
+                                </button>
+                            </div><!--buttons-->
+
+                        </div><!--left-part-->
+
+                    </div><!--news-item4-content-->
+  
+                </div><!--row card-->
+            </div><!--container-->
+        </section><!--News-->
+
+
+
+      
+        <!--join us-->
+        <section class="mb-5">
+            <h2 class="join-title  text-center mb-5">JOIN US</h2>
+
+            <div class="container">
+                <div class=" mb-5 d-flex flex-column flex-md-row gap-5 justify-content-around align-items-center flex-wrap">
+
+                    <div class="join-items rounded col-8  col-lg-3   text-center py-4 btn" style="width: 35vh;">
+                        <h3 class="text-info fs-4"> Subscribe Now</h3>
+                        <div class="insta badge my-2">
+                            <i class="fa-brands  fa-twitter fs-1  text-primary p-2  text-center icon-container " ></i>
+                        </div>
+                        <p class="text-info fs-5"> Go to link</p>
+                    </div>
+
+                    <div class="join-items rounded col-8 col-lg-3  text-center py-4 btn" style="width: 35vh;">                        
+                        <h3 class="text-info fs-4"> Follow</h3>
+                        <div class="insta badge my-2">
+                            <i class="fa-brands fa-whatsapp  fs-1 text-primary p-2  text-center icon-container text-success" ></i>
+                        </div>
+                        <p class="text-info fs-5"> Go to link</p>
+                    </div>
+
+                    <div class="join-items rounded col-8  col-lg-3  text-center py-4 btn" style="width: 35vh;">                       
+                        <h3 class="text-info fs-4"> Watch Videos</h3>
+                        <div class="insta badge my-2">         
+                            <i class="fa-brands fa-instagram fs-1  p-2 text-center icon-container  " ></i>
+                        </div>
+                        <p class="text-info fs-5 "> Go to link</p>
+                    </div >
+
+                    
+                    <div class="join-items rounded col-8  col-lg-3  text-center py-4 btn " style="width: 35vh;">                       
+                        <h3 class="text-info fs-4"> Like the Page</h3>
+                        <div class="insta badge my-2">         
+                            <i class="fa-brands fa-linkedin-in  fs-1 text-primary p-2  text-center icon-container " ></i>
+                        </div>
+                        <p class="text-info fs-5"> Go to link</p>
+                    </div>
+                   
+                </div>
+    
+            </div>
+            
+
+        </section><!--join us-->
+
+        <footer>
+            <div class="container ">
+                <div class="d-flex row   gap-2 justify-content-between align-items-center px-1 pt-3">
+
+                    <div class=" footer-items col-12 col-lg-3">
+                        <p class="footer-line" ></p><!--line-->
+                        <div class="footer-header d-flex justify-content-around my-2">
+                            <div class="footer-logo" >
+                                <img src="img/initial-ac-logo-design-combination-icon_826849-694.jpg" alt="">
+                            </div>
+                            <h4 class="text-light ps-2 align-self-center">Good Company</h4>
+                        </div><!---footer header-->
+                        <p class="footer-line" ></p><!--line-->
+                        <div class="footer-info text-center text-light">
+                            <p>tel: 00 00 0000000</p>
+                            <p>Address: Germany</p>
+                            <p>fax: 00 00 0000000</p>
+
+                        </div><!--footer info-->
+
+                    </div><!--items-->
+
+                    <div class="  footer-items col-12 col-lg-3">
+                        <p class="footer-line" ></p><!--line-->
+                        <div class="footer-header d-flex justify-content-around my-2">
+                            <div class="footer-logo" >
+                                <img src="img/initial-ac-logo-design-combination-icon_826849-694.jpg" alt="">
+                            </div>
+                            <h4 class="text-light ps-2 align-self-center">Important links</h4>
+                        </div><!---footer header-->
+                        <p class="footer-line" ></p><!--line-->
+                        <div class="footer-info text-center text-light">
+                            <p><a class="text-decoration-none text-dark" href="#">Visit Us</a></p> 
+                            <p><a class="text-decoration-none text-dark" href="#">Take a look</a></p>
+                            <p><a class="text-decoration-none text-dark" href="#"> Your health is more important</a></p>
+
+                        </div><!--footer info-->
+
+                    </div><!--items-->
+
+                    <div class="footer-items col-12 col-lg-3">
+                        <p class="footer-line" ></p><!--line-->
+                        <div class="footer-header d-flex justify-content-around my-2">
+                            <div class="footer-logo" >
+                                <img src="img/initial-ac-logo-design-combination-icon_826849-694.jpg" alt="">
+                            </div>
+                            <h4 class="text-light ps-2 align-self-center">Vision</h4>
+                        </div><!---footer header-->
+                        <p class="footer-line" ></p><!--line-->
+                        <div class="footer-info text-center text-light">
+                            <p>Service for all</p>
+                            <p>Provide best services</p>
+                            <p>You will be better than before</p>
+
+                        </div><!--footer info-->
+
+                    </div><!--items-->
+
+                </div>
+
+                
+            </div>
+            <p class="footer-line container my-2" ></p><!--line-->
+            <h3 class="copyright text-center container-fluid py-3">COPYRIGHT&copy; 2024 ALAN RAMADAN COMPANY.ALL RIGHTS</h3>
+            <p class="footer-line container " ></p><!--line-->
+        </footer>
+
+        
+       
+        <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)})
+        </script>
+
+       <script src="JS/script.js"></script>
+    </body>
+</html>
+
